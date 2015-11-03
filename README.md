@@ -18,7 +18,7 @@ on the contrary you'll have an error with the data type.
 
 # How make a validator about the float number that can't enter characters
 This function also can add point for the thousand.
-See an example here: http://jsfiddle.net/leonelphm/1tx5qc3d/
+See an example here: http://jsfiddle.net/leonelphm/1tx5qc3d/1/
 
 javascript:
 
@@ -35,7 +35,7 @@ javascript:
 	}
 	$(document).ready(function(){
 	    $('#myinput').on('keyup', function(){
-	        this.value = (this.value + '').replace(/[^\d,]/g, '');
+	        $(this).val( (this.value + '').replace(/[^\d,]/g, ''));
 	        $(this).val(format.call($(this).val().split('.').join(''),'.',','));
 	    });
 	});
